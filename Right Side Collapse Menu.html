@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<style>
+
+
+.otherside{
+background-color:#333;
+color:orange;
+position:fixed;
+width:100%;
+height:100%;
+top:665px;
+}
+
+
+.otherside p{
+top:9px;
+position:relative;
+
+}
+
+
+
+#bltx{
+top:-6px;
+color:red;
+position:relative;
+}
+
+
+
+
+body{
+margin:0;
+display:block;
+
+}
+
+
+
+.navbar {
+overflow: hidden;
+  background-color: #333;
+  position:fixed;
+  top:0;
+  width: 100%;
+  display:block;
+height:90px;
+
+
+
+}
+
+
+
+
+.navbar a:hover{
+text-decoration:underline;
+color:purple;
+font-weight:bold;
+font-size:30px;
+
+
+
+}
+
+
+
+
+
+
+
+
+.navbar a{
+list-style:none;
+display:inline-block;
+text-decoration:none;
+padding:38px 30px 0 0;
+color:cyan;
+
+}
+
+
+
+#main{
+color:white;
+position:relative;
+
+top:50px;
+
+
+background-color:red;
+height:	auto;
+width:100%;
+}
+
+
+
+body {
+    font-family: "Lato", sans-serif;
+	
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+	
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+input[type=texta] {
+    height:auto;
+	width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: teal;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 12px 40px;
+	top:-5px;
+	position:relative;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=texta]:focus {
+    width: 30%;
+	bottom:0.1px;
+}
+
+
+
+
+input[id=texta]:hover {
+    background-color:yellow;
+}
+
+
+
+
+#pin{
+top:6px;
+position:relative;
+}
+
+
+
+#pina{
+top:8px;
+position:relative;
+}
+
+
+
+
+#pinb{
+top:8px;
+position:relative;
+}
+
+
+
+
+#tt{
+top:-6px;
+position:relative;
+
+}
+
+
+
+
+#ta{
+top:-11px;
+position:relative;
+
+}
+
+
+</style>
+</head>
+<body onclick="hideside()">
+
+<div id="navg" class="navbar">
+  <a id="tophomea" href="https://www.google.com">Home</a>
+  <a id="tophomeb" href="#news">News</a>
+  <a id="tophomec" href="#contact">Contact</a>
+  <a id="tophomed" href="#about">About</a>
+</div>
+
+
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+
+  
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+
+
+<div id="othera" class="otherside" >
+  <p id="bltxa">Web Page designed by the same creator of this video.  </p>
+  <p id="bltx">Click in the description below for more!</p>
+</div>
+
+
+
+
+<div id="main">
+<p ><span id="ta">Right-sided Navigation </span> <span id="tt" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open   </span>  &nbsp;&nbsp;&nbsp; <input onfocusout="original()"  onfocus="expand()" id="texta" type="texta" name="search" placeholder="Search..">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="disappear" onenter="expand()" ><a id="pin" title="Follow me on Facebook" href="http://facebook.com/"><img  alt="Facebook" src="https://2.bp.blogspot.com/-0PxJ0YNjSaU/UcF0BEBkjVI/AAAAAAAAAL8/A4ZFQix37Hk/s200/Facebook-Logo.png" height="50" width="50" /></a>
+<a  id="pina" title="Follow me on Twitter" href="http://twitter.com/"><img alt="Twitter" src="data:image/png;base64,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" height="50" width="50" /></a>
+
+
+<a id="pinb" title="Follow me on Pinterest" href="http://pinterest.com/"><img alt="Pinterest" src="https://aladdintravel.com/wp-content/uploads/2014/11/pinterest-logo-2-1074x1067.png" height="50" width="50" /></a>
+
+
+
+</span></p>
+
+
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div id="text">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+var count=0;
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	
+	
+	document.body.style.marginRight = "233px";
+	
+document.body.style.background="rgba(0,0,0,0.7)";	
+	
+	
+	
+	
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	document.body.style.marginRight = "0px";
+	document.body.style.background="rgba(0,0,0,0)";
+}
+
+
+
+
+
+
+
+
+function hideside(){
+count++;
+
+
+if(count===2){
+
+
+
+closeNav();
+
+
+count=0;
+}
+
+
+
+}
+
+
+
+document.getElementById("text").innerHTML="<p>I am seeing some example texts</p>";
+
+
+for(var z=0;z<30;z++){
+
+document.getElementById("text").innerHTML+="<p>I am seeing some example texts</p>";
+
+document.getElementById("text").innerHTML+="<p>I am seeing some example texts</p>";
+
+}
+
+window.onscroll=function () {scrollinfo()}
+
+
+function scrollinfo(){
+var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+
+
+if(winScroll>200){
+document.getElementById("navg").style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+
+
+if(winScroll<200){
+document.getElementById("navg").style.backgroundColor = "#333";
+}
+
+
+}
+
+
+function expand(){
+
+
+document.getElementById("pin").style.display="none";
+document.getElementById("pina").style.display="none";
+document.getElementById("pinb").style.display="none";
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+function original(){
+
+
+document.getElementById("pin").style.display="inline-block";
+document.getElementById("pina").style.display="inline-block";
+document.getElementById("pinb").style.display="inline-block";
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+     
+</body>
+</html> 
