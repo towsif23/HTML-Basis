@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+@keyframes slide {
+  from { right: 60%;}
+  to { right: -60%;}
+}
+@-webkit-keyframes slide {
+  from { right: 60%;}
+  to { right: -60%;}
+}
+
+
+#open{
+top:-1000px;
+font-size:50px;
+color:white;
+font-size:70px;
+
+}
+
+
+
+#pica{
+top:145px;
+height:140px;
+width:auto;
+border-radius:50%;
+  border-style: solid;
+    border-color: blue;
+border-width: 8px;
+margin-left:18px;
+
+position:relative;
+
+}
+
+
+
+#picb{
+bottom:185px;
+height:145px;
+width:145px;
+border-radius:90%;
+  border-style: solid;
+    border-color: blue;
+border-width: 8px;
+left:50px;
+text-align: center;
+
+position:relative;
+background-color:violet;
+
+opacity:0.5;
+cursor:pointer;
+display:none;
+}
+
+
+
+
+
+
+
+#pic{
+ border-style: solid;
+    border-color: blue;
+border-width: 8px;
+height:80px;
+border-radius:50%;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow: hidden;
+    transition: 0.5s;
+   
+}
+
+
+
+#text{
+    transition: 0.3s;
+}
+
+
+
+
+#texta{
+
+    transition: 0.3s;
+}
+
+
+#textb{
+    transition: 0.3s;
+
+}
+
+
+#myHeader{
+
+    transition: 0.3s;
+}
+
+.sidenav a {
+
+position:relative;
+bottom:159px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+    transition: 0.1s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transition: 0.3s;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+font-size:19px;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+background-color:black;
+color:yellow;
+}
+
+.top-container {
+   background-color: black;
+  padding: 60px;
+
+font-size:20px;
+text-align:right;
+
+
+ 
+}
+
+
+
+#text {
+top:4%;
+margin-right:-40px;
+right:50px;
+    position:absolute;
+font-size:20px;
+
+  color:gold;
+   position:absolute;
+
+
+  font-size:30px;
+  animation-name: slide;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count: infinite;
+
+}
+
+
+h1 {
+
+margin-top:5px;
+    color:orange;
+
+
+}
+
+
+
+.header {
+  padding: 10px 16px;
+  background: green;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+</head>
+<body>
+
+
+
+
+<div id="mySidenav" class="sidenav">
+
+
+
+<br>
+<br>
+
+  <a href="#"><img onmouseover="outshow()" id="pica" src="coomm_towcal--black.jpg" id="pic"></a>
+
+
+<div id="picb"  onmouseout="outhide()" onclick="logout()"> <br> <br><br>&nbsp; Logout ???</div>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="https://www.bing.com">Contact</a>
+
+</div>
+
+
+
+
+<div id="texta" class="top-container">
+<h1  id="text">Check Around</h1>
+
+<p id="text">Welcome to my Responsive HTML.</p>
+</div>
+
+<div class="header" id="myHeader">
+  <h2><img src="coomm_towcal--black.jpg" id="pic">  <span style="font-size:30px;" onclick="openNav()" ><p1 id="open">&#9776; </p2></span>  </h2>
+</div>
+
+<div id="textb" class="content">
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#8686;</button>
+  <h3>Fixed Header Scrolling</h3>
+  <p>The header will stick to the top when you reach its scroll position.</p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+  <p>Hello guys, the header will change its size and text when you keep scrolling down and it will change back when you scroll back up.  </p>
+
+</div>
+
+<script>
+var header = document.getElementById("open");
+
+
+
+var yy=sessionStorage.getItem("name");
+
+
+
+if(yy.length>0){
+
+header.innerHTML+= "<a> Welcome to Domain," + yy+"!</a>";
+} 
+
+
+window.onscroll = function() {myFunction()};
+
+var ori=document.getElementById("myHeader").innerHTML;
+
+var point="fff";
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+
+ if (window.pageYOffset <= sticky) {
+document.getElementById("myHeader").innerHTML = ori;
+document.getElementById("myBtn").style.display = "none";
+} else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+
+
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    }
+
+
+
+
+
+  if (window.pageYOffset >= sticky) {
+
+    header.classList.add("sticky");
+
+if(point==="fff"){
+document.getElementById("myHeader").innerHTML = "You are scrolling down!"; 
+point==="chng";
+}
+
+
+
+
+
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+document.getElementById("myBtn").style.display = "none";
+}
+
+
+
+
+
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+       document.getElementById("textb").style.marginLeft = "250px";
+   
+   document.getElementById("myHeader").style.marginLeft = "250px";
+    document.getElementById("texta").style.marginLeft = "250px";
+
+setTimeout(closeNav, 6000);
+    
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+   document.getElementById("textb").style.marginLeft = "0px";
+   document.getElementById("myHeader").style.marginLeft = "0px";
+    document.getElementById("texta").style.marginLeft = "0";
+}
+
+
+
+function outshow(){
+document.getElementById("picb").style.display="inline-block";
+
+var ho=document.getElementsByTagName("a");
+
+
+for(var ht=2;ht<ho.length-1;ht++){
+ho[ht].style.top="-305px";
+
+}
+
+
+}
+
+
+
+
+function outhide(){
+document.getElementById("picb").style.display="none";
+var ho=document.getElementsByTagName("a");
+
+
+for(var ht=2;ht<ho.length-1;ht++){
+ho[ht].style.top="-167px";
+
+}
+
+}
+
+
+
+
+function logout(){
+window.open("Login.html");
+
+}
+
+
+
+</script>
+
+</body>
+</html>
